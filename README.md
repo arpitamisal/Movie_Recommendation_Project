@@ -35,8 +35,6 @@ This project is a simple movie recommender system built using item-based collabo
 - Calculate cosine similarity with all other movies
 - Return the top N most similar movies (excluding the input)
 
-
-
 ---
 
 ## 💻 How to Run
@@ -46,16 +44,20 @@ This project is a simple movie recommender system built using item-based collabo
 -     pip install -r requirements.txt
 
 Run the notebook:
--     jupyter notebook MovieRecommendation.ipynb
+- jupyter notebook MovieRecommendation.ipynb
+
+---
 
 ##  📽️ Sample Output
 
 - Input Movie: Forrest Gump 
   - Top Recommendations:
-  -     The Shawshank Redemption
-  -     Apollo 13
-  -     Piladelphia
-  -     Rain Man 
+  - The Shawshank Redemption
+  - Apollo 13
+  - Piladelphia
+  - Rain Man 
+
+---
 
 ## 🧠 Limitations
 - Only recommends based on rating patterns, not content or genre
