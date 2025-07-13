@@ -1,77 +1,62 @@
-🎬 Movie Recommendation System (Cosine Similarity Based)
+# 🎬 Movie Recommendation System (Cosine Similarity Based)
 
 This project is a simple movie recommender system built using item-based collaborative filtering with cosine similarity. It suggests movies similar to a given movie based on user rating patterns—no machine learning models used.
 
-🚀 Project Overview
+---
 
-    Goal: Recommend movies that are similar to a selected movie
+## 🚀 Project Overview
 
-    Approach: Item-based collaborative filtering using cosine similarity
+- **Approach:** Item-based collaborative filtering using cosine similarity
+- **Dataset:** movies.csv (https://www.kaggle.com/datasets/harshshinde8/movies-csv)
+- **Tech stack:** Python, pandas, NumPy, Seaborn, Matplotlib
 
-    Dataset: movies.csv (https://www.kaggle.com/datasets/harshshinde8/movies-csv)
 
-    Tech stack: Python, pandas, NumPy, Seaborn, Matplotlib
+---
 
-🧬 Data Description
+## 🧬 Data Description
 
-    movies.csv: Contains movieId, title, and genres
+- `movies.csv`: Contains movieId, title, and genres
 
-Merged both datasets and pivoted to form a user-movie matrix used for similarity calculations.
-🧹 Preprocessing Steps
+---
 
-    Read and cleaned the dataset
+## 🧹 Preprocessing Steps
 
-    Created a pivot table: rows = users, columns = movies, values = ratings
+- Read and cleaned the dataset
+- Created a pivot table: rows = users, columns = movies, values = ratings
+- Replaced missing values with empty string
+- Computed pairwise cosine similarity between movie columns
 
-    Replaced missing values with empty string
+---
 
-    Computed pairwise cosine similarity between movie columns
+## 🤖 Recommendation Logic
 
-🤖 Recommendation Logic
+- Input a movie title
+- Extract its column vector from the user-movie matrix
+- Calculate cosine similarity with all other movies
+- Return the top N most similar movies (excluding the input)
 
-    Input a movie title
 
-    Extract its column vector from the user-movie matrix
 
-    Calculate cosine similarity with all other movies
+---
 
-    Return the top N most similar movies (excluding the input)
-    
-📊 Visualization
+## 💻 How to Run
 
-    Distribution of movie ratings
+- Clone this repo
+- Install dependencies:
+-     pip install -r requirements.txt
 
-    Popular movies by number of ratings
+Run the notebook:
+-     jupyter notebook MovieRecommendation.ipynb
 
-    Heatmap showing similarity between selected movies
+##  📽️ Sample Output
 
-💻 How to Run
+- Input Movie: Forrest Gump 
+  - Top Recommendations:
+  -     The Shawshank Redemption
+  -     Apollo 13
+  -     Piladelphia
+  -     Rain Man 
 
-    Clone this repo
-
-    Install dependencies:
-
-pip install -r requirements.txt
-
-    Run the notebook:
-
-jupyter notebook MovieRecommendation.ipynb
-
-📽️ Sample Output
-
-    Input Movie: Forrest Gump 
-    Top Recommendations:
-
-        The Shawshank Redemption 
-
-        Apollo 13 
-
-        Philadelphia 
-
-        Rain Man 
-
-🧠 Limitations
-
-    Only recommends based on rating patterns, not content or genre
-
-    No ML model or deep personalization for individual users
+## 🧠 Limitations
+- Only recommends based on rating patterns, not content or genre
+- No ML model or deep personalization for individual users
