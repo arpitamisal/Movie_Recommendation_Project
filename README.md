@@ -1,6 +1,7 @@
 🎬 Movie Recommendation System (Cosine Similarity Based)
 
 This project is a simple movie recommender system built using item-based collaborative filtering with cosine similarity. It suggests movies similar to a given movie based on user rating patterns—no machine learning models used.
+
 🚀 Project Overview
 
     Goal: Recommend movies that are similar to a selected movie
